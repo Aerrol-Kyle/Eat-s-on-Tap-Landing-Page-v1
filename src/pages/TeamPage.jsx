@@ -22,7 +22,7 @@ function TeamPage() {
       name: 'Aerrol Kyle Santos',
       role: 'Project Manager',
       image: 'PM.png',
-      description: "Oversees the deployment and strategy of the Eat's on Tap system, ensuring all milestones for La Verdad Christian College are met smoothly.",
+      description: "Oversees the project from start to finish, ensuring it stays on track, within budget, and aligned with requirements. Maintains quality standards and serves as the central point of communication among team members.",
       socials: { linkedin: '#', twitter: '#', github: '#' }
     },
     {
@@ -30,7 +30,7 @@ function TeamPage() {
       name: 'John Miguel Mañabo',
       role: 'Full-Stack Developer',
       image: 'DEV.png',
-      description: 'Architect behind the RFID logic and real-time dashboard analytics, focusing on high availability and secure data transmission.',
+      description: 'Leads the technical development and implementation of the system, handling coding, building key features, and ensuring all components function as intended.',
       socials: { linkedin: '#', twitter: '#', github: '#' }
     },
     {
@@ -38,7 +38,7 @@ function TeamPage() {
       name: 'Roylyn Joy Dicdican',
       role: 'UI/UX Designer',
       image: 'UI.png',
-      description: 'Responsible for designing intuitive user interfaces, focusing heavily on modern glassmorphism to guarantee a premium app feel.',
+      description: 'Designs the system’s visual interface and overall look, ensuring it meets requirements and delivers a high-quality user experience.',
       socials: { linkedin: '#', twitter: '#', github: '#' }
     },
     {
@@ -46,7 +46,7 @@ function TeamPage() {
       name: 'Mark Joseph Santos',
       role: 'Quality Assurance',
       image: 'SQA.png',
-      description: 'Conducts rigorous stress testing on hardware and software endpoints to eliminate bugs before students tap to launch their meals.',
+      description: 'Ensures the project meets defined quality standards by monitoring deliverables, identifying issues, and supporting continuous improvement throughout the development process.',
       socials: { linkedin: '#', twitter: '#', github: '#' }
     }
   ];
@@ -263,15 +263,18 @@ function TeamPage() {
         }
 
         .team-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             color: white;
             margin-bottom: 8px;
+            text-align: center;
+            line-height: 1.3;
         }
 
         .team-card p.role {
             color: #60a5fa;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 15px;
+            text-align: center;
         }
 
         /* Modal Overlay */
@@ -419,15 +422,53 @@ function TeamPage() {
             margin-top: 60px;
         }
 
+        @media (max-width: 1200px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
         @media (max-width: 968px) {
             .team-section {
                 padding: 120px 30px 60px;
+            }
+            .team-header h1 {
+                font-size: 36px;
+            }
+            .team-header p {
+                font-size: 16px;
             }
             nav {
                 display: none;
             }
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .team-section {
+                padding: 100px 20px 40px;
+            }
+            .team-card {
+                padding: 30px;
+            }
+            .team-card h3 {
+                font-size: 20px;
+            }
+            .team-header h1 {
+                font-size: 28px;
+            }
+            .team-signature {
+                font-size: 14px;
+                letter-spacing: 1px;
             }
         }
           `
