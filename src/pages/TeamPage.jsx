@@ -47,7 +47,7 @@ function TeamPage() {
       role: 'Quality Assurance',
       image: 'SQA.png',
       description: 'Ensures the project meets defined quality standards by monitoring deliverables, identifying issues, and supporting continuous improvement throughout the development process.',
-      socials: { linkedin: '#', insta: '#', spotify: '#', github: '#' }
+      socials: { linkedin: 'https://www.linkedin.com/in/mark-joseph-santos-5b4825401/', insta: 'https://www.instagram.com/josephmark.santos1234/', spotify: 'https://open.spotify.com/user/31mcf2v3jgl6ux2wrlcpeydyaane?si=87664e21a9614e66', github: 'https://github.com/markjosephsantos1234' }
     }
   ];
 
