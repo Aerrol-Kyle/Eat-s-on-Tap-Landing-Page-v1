@@ -266,6 +266,10 @@ function AboutLVCC() {
             margin-bottom: 12px;
             transition: color 0.3s ease;
         }
+
+        .footer-links a:hover {
+            color: #60a5fa;
+        }
         
         .footer-bottom {
             text-align: center;

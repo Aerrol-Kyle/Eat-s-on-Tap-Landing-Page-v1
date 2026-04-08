@@ -406,6 +406,10 @@ function TeamPage() {
             transition: color 0.3s ease;
         }
 
+        .footer-links a:hover {
+            color: #60a5fa;
+        }
+
         .team-signature {
             text-align: center;
             padding-top: 60px;
