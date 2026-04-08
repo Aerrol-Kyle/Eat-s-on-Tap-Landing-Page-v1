@@ -163,7 +163,8 @@ function AboutLVCC() {
         .about-visual-container {
             flex: 0 0 40%;
             display: flex;
-            margin-top: 55px;
+            margin-top: 56px;
+            margin-bottom: 24px;
         }
 
         .about-content {
