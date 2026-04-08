@@ -549,7 +549,7 @@ function TeamPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          BSIS 4 TEAM 4 2025 - 26
+          BSIS 4 / TEAM 4 / 2025-26
         </motion.div>
       </section>
 
