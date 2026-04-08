@@ -819,7 +819,7 @@ function LandingPage() {
             user-select: none;
         }
         .faq-question {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 500;
             color: white;
             margin: 0;
@@ -868,7 +868,8 @@ function LandingPage() {
             padding: 0 24px 24px;
         }
         .faq-answer {
-            font-size: 16px;
+            font-size: 18px !important;
+            font-weight: 400 !important;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
             margin: 0;
@@ -1383,7 +1384,7 @@ function LandingPage() {
               >
                 <div className="faq-header" onClick={() => toggleFaq(index)}>
                   <h3 className="faq-question">{faq.question}</h3>
-                  <motion.div 
+                  <motion.div
                     className="faq-icon"
                     animate={{ rotate: openFaq === index ? 180 : 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
