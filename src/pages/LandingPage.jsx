@@ -841,20 +841,13 @@ function LandingPage() {
         }
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
+            background: rgba(59, 130, 246, 0.2);
+            color: white;
         }
         .faq-content-wrapper {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 0.3s ease-out;
-        }
-        .faq-item.active .faq-content-wrapper {
-            grid-template-rows: 1fr;
+            overflow: hidden;
         }
         .faq-content {
-            overflow: hidden;
-            padding: 0 24px;
-        }
-        .faq-item.active .faq-content {
             padding: 0 24px 24px;
         }
         .faq-answer {
@@ -862,7 +855,7 @@ function LandingPage() {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
             margin: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 16px;
         }
 
@@ -1373,13 +1366,30 @@ function LandingPage() {
               >
                 <div className="faq-header" onClick={() => toggleFaq(index)}>
                   <h3 className="faq-question">{faq.question}</h3>
-                  <div className="faq-icon">+</div>
+                  <motion.div 
+                    className="faq-icon"
+                    animate={{ rotate: openFaq === index ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    +
+                  </motion.div>
                 </div>
-                <div className="faq-content-wrapper">
-                  <div className="faq-content">
-                    <p className="faq-answer">{faq.answer}</p>
-                  </div>
-                </div>
+                <AnimatePresence>
+                  {openFaq === index && (
+                    <motion.div
+                      key="content"
+                      className="faq-content-wrapper"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="faq-content">
+                        <p className="faq-answer">{faq.answer}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
@@ -1467,8 +1477,8 @@ function LandingPage() {
           </div>
           <div className="footer-links">
             <h4>About</h4>
-            <Link to="/about" style={{ display: 'block', color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none', marginBottom: '12px' }}>LVCC</Link>
-            <Link to="/team" style={{ display: 'block', color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none', marginBottom: '12px' }}>Team</Link>
+            <Link to="/about">LVCC</Link>
+            <Link to="/team">Team</Link>
             <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')}>FAQ</a>
           </div>
         </motion.div>
