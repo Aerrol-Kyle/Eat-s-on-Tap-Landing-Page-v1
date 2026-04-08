@@ -1399,7 +1399,7 @@ function LandingPage() {
             <div className="section-badge">CONTACT US</div>
             <h2>Ask us anything!</h2>
             <p>
-              Have a question about Eat's on Tap, or want to know more about how we digitize student meals? Drop us a message and our team will get back to you shortly.
+              Have a question about Eat's on Tap, or want to know more about how we digitalize student meals? Drop us a message and our team will get back to you shortly.
             </p>
           </div>
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
