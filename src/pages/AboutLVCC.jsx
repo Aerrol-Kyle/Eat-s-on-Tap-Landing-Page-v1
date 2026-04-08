@@ -151,19 +151,27 @@ function AboutLVCC() {
         }
 
         .about-container {
-            display: grid;
-            grid-template-columns: 47% 1fr;
+            display: flex;
             gap: 60px;
-            align-items: center;
+            align-items: stretch;
             background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(15, 23, 42, 0.3) 100%);
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 60px;
         }
 
+        .about-visual-container {
+            flex: 0 0 40%;
+            display: flex;
+            margin-top: 55px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
         .about-visual {
             width: 100%;
-            min-height: 320px;
             height: 100%;
             border-radius: 16px;
             overflow: hidden;
@@ -187,30 +195,7 @@ function AboutLVCC() {
             left: 0;
         }
 
-        .carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
 
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: #3b82f6;
-            transform: scale(1.2);
-        }
 
         .about-content h1 {
             font-size: 48px;
@@ -290,9 +275,14 @@ function AboutLVCC() {
 
         @media (max-width: 968px) {
             .about-container {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 gap: 40px;
                 padding: 40px 30px;
+            }
+            .about-visual-container {
+                flex: 0 0 auto;
+                width: 100%;
+                margin-top: 0;
             }
             .about-section {
                 padding: 120px 30px 60px;
@@ -346,13 +336,13 @@ function AboutLVCC() {
             <div className="about-badge">ABOUT LVCC</div>
             <h1>Empowering Scholars</h1>
             <p>
-              La Verdad Christian College (LVCC) is a private, non-stock, non-sectarian educational institution established in Apalit, Pampanga. It stands out uniquely for its remarkable mission: providing absolute free quality education to deserving scholars.
+              La Verdad Christian College (LVCC) is a private, non-stock, non-sectarian educational institution established in Apalit, Pampanga. It stands out uniquely for its remarkable advocacy: providing absolute free quality education to deserving scholars.
             </p>
             <p>
               Recognized as the first private school in the Philippines to grant a completely free college education—which includes devoid tuition, miscellaneous fees, uniform, and meals—LVCC envisions producing not only academically excellent professionals but individuals with strong moral fiber.
             </p>
             <p>
-              Driven by the philosophy "Wisdom Based on the Truth is Priceless," La Verdad continues to innovate, streamline its systems (such as the Eats on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
+              Driven by the philosophy "Wisdom Based on the Truth is Priceless". La Verdad continues to innovate, streamline its systems (such as the Eats on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
             </p>
           </div>
         </motion.div>
@@ -427,16 +417,6 @@ function Carousel() {
           style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
         />
       </AnimatePresence>
-      <div className="carousel-dots">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            className={`dot ${currentIndex === idx ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(idx)}
-            aria-label="Image indicator"
-          />
-        ))}
-      </div>
     </div>
   );
 }
