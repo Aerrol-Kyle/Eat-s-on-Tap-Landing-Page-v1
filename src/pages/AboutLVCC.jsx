@@ -38,6 +38,7 @@ function AboutLVCC() {
             font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: #0f172a;
             color: #f8fafc;
+            scroll-behavior: smooth;
         }
 
         .font-tolkien {
@@ -151,7 +152,7 @@ function AboutLVCC() {
 
         .about-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 47% 1fr;
             gap: 60px;
             align-items: center;
             background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(15, 23, 42, 0.3) 100%);
@@ -162,7 +163,8 @@ function AboutLVCC() {
 
         .about-visual {
             width: 100%;
-            aspect-ratio: 4/3;
+            min-height: 320px;
+            height: 100%;
             border-radius: 16px;
             overflow: hidden;
             position: relative;
@@ -350,7 +352,7 @@ function AboutLVCC() {
               Recognized as the first private school in the Philippines to grant a completely free college education—which includes devoid tuition, miscellaneous fees, uniform, and meals—LVCC envisions producing not only academically excellent professionals but individuals with strong moral fiber.
             </p>
             <p>
-              Driven by the philosophy "Wisdom Based on the Truth is Priceless," La Verdad continues to innovate, streamline its systems (such as the Eat's on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
+              Driven by the philosophy "Wisdom Based on the Truth is Priceless," La Verdad continues to innovate, streamline its systems (such as the Eats on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
             </p>
           </div>
         </motion.div>
@@ -372,15 +374,15 @@ function AboutLVCC() {
           </div>
           <div className="footer-links">
             <h4>Product</h4>
-            <Link to="/">Features</Link>
-            <Link to="/">How It Works</Link>
-            <a href="/#contact">Contact Us</a>
+            <Link to="/#features">Features</Link>
+            <Link to="/#how-it-works">How It Works</Link>
+            <Link to="/#contact">Contact Us</Link>
           </div>
           <div className="footer-links">
             <h4>About</h4>
             <Link to="/about">LVCC</Link>
             <Link to="/team">Team</Link>
-            <Link to="/">FAQ</Link>
+            <Link to="/#faq">FAQ</Link>
           </div>
         </div>
         <div className="footer-bottom">

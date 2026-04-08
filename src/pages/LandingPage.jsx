@@ -641,7 +641,7 @@ function LandingPage() {
             border-radius: 24px;
             padding: 56px; /* larger padding */
             min-height: 320px;
-            transition: all 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -659,8 +659,8 @@ function LandingPage() {
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
             border-color: rgba(96, 165, 250, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(96, 165, 250, 0.15);
         }
 
         .feature-card:hover::before {
@@ -805,7 +805,7 @@ function LandingPage() {
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: border-color 0.3s ease;
         }
         .faq-item:hover {
             border-color: rgba(96, 165, 250, 0.3);
@@ -829,28 +829,32 @@ function LandingPage() {
             color: #3b82f6;
             font-size: 24px;
             font-weight: 300;
-            transition: transform 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 32px;
             height: 32px;
+            min-width: 32px;
             border-radius: 50%;
             background: rgba(59, 130, 246, 0.1);
+            transition: transform 0.3s ease-out;
         }
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
         .faq-content {
-            height: 0;
-            opacity: 0;
             overflow: hidden;
-            transition: all 0.3s ease;
             padding: 0 24px;
         }
         .faq-item.active .faq-content {
-            height: auto;
-            opacity: 1;
             padding: 0 24px 24px;
         }
         .faq-answer {
@@ -1190,10 +1194,11 @@ function LandingPage() {
                     <div className="carousel-item" key={i}>
                       <motion.div
                         className="feature-card"
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.2, delay: (i % 6) * 0.1 }}
+                        transition={{ duration: 0.3, delay: (i % 6) * 0.05 }}
+                        whileHover={{ y: -10, transition: { duration: 0.3, ease: "easeOut" } }}
                       >
                         <div className="feature-icon">{feature.icon}</div>
                         <h3>{feature.title}</h3>
@@ -1361,34 +1366,20 @@ function LandingPage() {
               <motion.div
                 key={index}
                 className={`faq-item ${openFaq === index ? 'active' : ''}`}
-                layout
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
               >
                 <div className="faq-header" onClick={() => toggleFaq(index)}>
                   <h3 className="faq-question">{faq.question}</h3>
-                  <motion.div
-                    className="faq-icon"
-                    animate={{ rotate: openFaq === index ? 45 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >+</motion.div>
+                  <div className="faq-icon">+</div>
                 </div>
-                <AnimatePresence>
-                  {openFaq === index && (
-                    <motion.div
-                      className="faq-content"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      style={{ overflow: 'hidden' }}
-                    >
-                      <p className="faq-answer">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div className="faq-content-wrapper">
+                  <div className="faq-content">
+                    <p className="faq-answer">{faq.answer}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

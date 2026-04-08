@@ -76,6 +76,7 @@ function TeamPage() {
             font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: #0f172a;
             color: #f8fafc;
+            scroll-behavior: smooth;
         }
 
         .font-tolkien {
@@ -624,15 +625,15 @@ function TeamPage() {
           </div>
           <div className="footer-links">
             <h4>Product</h4>
-            <Link to="/">Features</Link>
-            <Link to="/">How It Works</Link>
-            <a href="/#contact">Contact Us</a>
+            <Link to="/#features">Features</Link>
+            <Link to="/#how-it-works">How It Works</Link>
+            <Link to="/#contact">Contact Us</Link>
           </div>
           <div className="footer-links">
             <h4>About</h4>
             <Link to="/about">LVCC</Link>
             <Link to="/team">Team</Link>
-            <Link to="/">FAQ</Link>
+            <Link to="/#faq">FAQ</Link>
           </div>
         </div>
         <div className="footer-bottom">
