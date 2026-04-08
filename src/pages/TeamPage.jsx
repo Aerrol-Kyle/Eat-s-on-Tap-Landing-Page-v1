@@ -39,7 +39,7 @@ function TeamPage() {
       role: 'UI/UX Designer',
       image: 'UI.png',
       description: 'Designs the system’s visual interface and overall look, ensuring it meets requirements and delivers a high-quality user experience.',
-      socials: { linkedin: '#', insta: '#', spotify: '#', github: '#' }
+      socials: { linkedin: 'https://www.linkedin.com/in/roylyn-joy-dicdican-0665453a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', insta: 'https://www.instagram.com/lynxtorm', spotify: 'https://open.spotify.com/user/lultuinao50uz0k7q5xq4b9sd?si=jFmO6fhwSMqNKGHiHbwKSQ', github: 'https://github.com/roylynjoy' }
     },
     {
       id: '4',
