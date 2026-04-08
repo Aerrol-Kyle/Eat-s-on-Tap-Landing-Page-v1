@@ -827,22 +827,39 @@ function LandingPage() {
         }
         .faq-icon {
             color: #3b82f6;
-            font-size: 24px;
-            font-weight: 300;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 32px;
             height: 32px;
             min-width: 32px;
             border-radius: 50%;
             background: rgba(59, 130, 246, 0.1);
-            transition: transform 0.3s ease-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .faq-icon::before,
+        .faq-icon::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        /* Horizontal line */
+        .faq-icon::before {
+            width: 14px;
+            height: 2px;
+        }
+        /* Vertical line */
+        .faq-icon::after {
+            width: 2px;
+            height: 14px;
+        }
+        .faq-item.active .faq-icon::after {
+            transform: scaleY(0);
+            opacity: 0;
         }
         .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-            background: rgba(59, 130, 246, 0.2);
-            color: white;
+            background: rgba(59, 130, 246, 0.15);
         }
         .faq-content-wrapper {
             overflow: hidden;
@@ -1368,11 +1385,9 @@ function LandingPage() {
                   <h3 className="faq-question">{faq.question}</h3>
                   <motion.div 
                     className="faq-icon"
-                    animate={{ rotate: openFaq === index ? 45 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    +
-                  </motion.div>
+                    animate={{ rotate: openFaq === index ? 180 : 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                  ></motion.div>
                 </div>
                 <AnimatePresence>
                   {openFaq === index && (
