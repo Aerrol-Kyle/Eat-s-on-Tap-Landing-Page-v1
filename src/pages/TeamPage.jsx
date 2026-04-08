@@ -23,7 +23,7 @@ function TeamPage() {
       role: 'Project Manager',
       image: 'PM.png',
       description: "Oversees the project from start to finish, ensuring it stays on track, within budget, and aligned with requirements. Maintains quality standards and serves as the central point of communication among team members.",
-      socials: { linkedin: '#', twitter: '#', github: '#' }
+      socials: { linkedin: 'https://www.linkedin.com/in/aerrol-kyle-santos-491aba279/', insta: 'https://www.instagram.com/aerrol_kylee/', spotify: 'https://open.spotify.com/user/31uxgqex2bne3t2yszrrclcvwnsq?si=27e2c5d70b264c6d', github: 'https://github.com/Aerrol-Kyle' }
     },
     {
       id: '2',
@@ -31,7 +31,7 @@ function TeamPage() {
       role: 'Full-Stack Developer',
       image: 'DEV.png',
       description: 'Leads the technical development and implementation of the system, handling coding, building key features, and ensuring all components function as intended.',
-      socials: { linkedin: '#', twitter: '#', github: '#' }
+      socials: { linkedin: 'https://www.linkedin.com/in/miguel-ma%C3%B1abo/', insta: 'https://www.instagram.com/archivistttt/', spotify: 'https://open.spotify.com/user/31oehewbagxue6rlryei5excfrue', github: 'https://github.com/Fourthhy    ' }
     },
     {
       id: '3',
@@ -39,7 +39,7 @@ function TeamPage() {
       role: 'UI/UX Designer',
       image: 'UI.png',
       description: 'Designs the system’s visual interface and overall look, ensuring it meets requirements and delivers a high-quality user experience.',
-      socials: { linkedin: '#', twitter: '#', github: '#' }
+      socials: { linkedin: '#', insta: '#', spotify: '#', github: '#' }
     },
     {
       id: '4',
@@ -47,7 +47,7 @@ function TeamPage() {
       role: 'Quality Assurance',
       image: 'SQA.png',
       description: 'Ensures the project meets defined quality standards by monitoring deliverables, identifying issues, and supporting continuous improvement throughout the development process.',
-      socials: { linkedin: '#', twitter: '#', github: '#' }
+      socials: { linkedin: '#', insta: '#', spotify: '#', github: '#' }
     }
   ];
 
@@ -594,9 +594,19 @@ function TeamPage() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                   </a>
                 )}
-                {selectedMember.socials?.twitter && (
-                  <a href={selectedMember.socials.twitter} className="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+                {selectedMember.socials?.insta && (
+                  <a href={selectedMember.socials.insta} className="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  </a>
+                )}
+                {selectedMember.socials?.spotify && (
+                  <a href={selectedMember.socials.spotify} className="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.306c-.215.352-.676.463-1.028.248-2.856-1.745-6.452-2.14-10.686-1.173-.404.092-.812-.162-.904-.565-.092-.403.162-.811.565-.903 4.634-1.06 8.604-.616 11.805 1.341.352.215.464.676.248 1.028zm1.472-3.26c-.27.439-.846.581-1.285.311-3.268-2.008-8.25-2.592-12.115-1.419-.495.15-1.021-.131-1.171-.626-.15-.495.129-1.021.625-1.171 4.412-1.339 9.904-.69 13.636 1.604.438.27.58.846.31 1.285zm.135-3.393C15.228 8.1 8.878 7.888 5.176 9.011c-.58.176-1.192-.156-1.368-.736s.156-1.192.736-1.368c4.25-1.29 11.272-1.045 15.753 1.614.523.311.692.987.382 1.51-.311.522-.988.692-1.511.382z" /></svg>
+                  </a>
+                )}
+                {selectedMember.socials?.gmail && (
+                  <a href={`mailto:${selectedMember.socials.gmail === '#' ? '' : selectedMember.socials.gmail}`} className="social-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                   </a>
                 )}
                 {selectedMember.socials?.github && (
