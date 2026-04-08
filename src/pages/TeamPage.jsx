@@ -55,7 +55,7 @@ function TeamPage() {
 
   return (
     <>
-      <title>Eat's on Tap - The Team</title>
+      <title>Eat's on Tap - About the Team</title>
       <style
         dangerouslySetInnerHTML={{
           __html: `
