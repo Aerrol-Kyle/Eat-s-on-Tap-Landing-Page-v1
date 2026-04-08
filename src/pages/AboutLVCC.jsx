@@ -350,7 +350,7 @@ function AboutLVCC() {
               Recognized as the first private school in the Philippines to grant a completely free college education—which includes devoid tuition, miscellaneous fees, uniform, and meals—LVCC envisions producing not only academically excellent professionals but individuals with strong moral fiber.
             </p>
             <p>
-              Driven by the philosophy "The Truth Shall Make You Free," La Verdad continues to innovate, streamline its systems (such as the Eat's on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
+              Driven by the philosophy "Wisdom Based on the Truth is Priceless," La Verdad continues to innovate, streamline its systems (such as the Eat's on Tap RFID meal claims), and build a holistic environment where students thrive gracefully.
             </p>
           </div>
         </motion.div>
@@ -397,9 +397,9 @@ function AboutLVCC() {
 // Simple internal Image Carousel for the about page
 function Carousel() {
   const images = [
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/La_Verdad_Christian_College.jpg/800px-La_Verdad_Christian_College.jpg",
-    "https://fastly.4sqi.net/img/general/600x600/18868984_Fj2j-i-S1n8jO_4n0_aB3B__hL__X--O_A__j_B-9a0.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/a/ab/LVCC_Facade.JPG"
+    "LV1.png",
+    "LV2.png",
+    "LV3.png"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
