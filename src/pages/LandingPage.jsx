@@ -122,7 +122,7 @@ function LandingPage() {
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Eat's on Tap - LVCC RFID Meal System</title>
+      <title>Eat's on Tap - Home</title>
       <link href="https://fonts.cdnfonts.com/css/geist" rel="stylesheet" />
       <style
         dangerouslySetInnerHTML={{

@@ -17,6 +17,7 @@ function AboutLVCC() {
 
   return (
     <>
+      <title>Eat's on Tap - About LVCC</title>
       <style
         dangerouslySetInnerHTML={{
           __html: `
