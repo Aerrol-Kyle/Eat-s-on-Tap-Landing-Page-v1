@@ -251,11 +251,12 @@ function LandingPage() {
         }
 
         .header-cta {
-            padding: 10px 24px;
+            padding: 13px 37px;
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 600;
+            font-size: 14px;
             transition: all 0.3s ease;
         }
 
@@ -385,6 +386,8 @@ function LandingPage() {
 
         .btn {
             padding: 18px 36px;
+            min-width: 180px;
+            text-align: center;
             border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
@@ -1099,6 +1102,7 @@ function LandingPage() {
             <a href="#stats" onClick={(e) => scrollToSection(e, 'stats')}>Impact</a>
             <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')}>FAQ</a>
             <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
+            <a href="#" className="header-cta" style={{ textDecoration: 'none' }}>Log In</a>
           </nav>
           <div className="menu-toggle">
             <span />
@@ -1146,6 +1150,9 @@ function LandingPage() {
               real-time analytics for La Verdad Christian College.
             </p>
             <div className="cta-buttons">
+              <a href="#" className="btn btn-primary">
+                Log In
+              </a>
               <a href="#features" className="btn btn-secondary" onClick={(e) => scrollToSection(e, 'features')}>
                 Learn More
               </a>
