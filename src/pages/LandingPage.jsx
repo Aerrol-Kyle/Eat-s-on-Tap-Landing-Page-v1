@@ -24,6 +24,7 @@ function LandingPage() {
     { question: "Why RFID and not QR code?", answer: "RFID technology offers superior speed and reliability for high-volume environments like school canteens. Unlike QR codes, RFID allows for instant, tap-and-go transactions without the need for scanning, reducing queues and ensuring a seamless meal claiming experience for students." },
     { question: "What would the students do if the system is down?", answer: "In the event of system outage, the students are required to go to the PSAS department to claim for their temporary coupon by tapping their student ID on the provided RFID Scanner." },
     { question: "How secured the system is?", answer: "Our system is highly secure, combining Google's cryptographic verification with strict @laverdad.edu.ph domain locking to block unauthorized users. It further protects accounts using encrypted passwords, HTTP-only secure cookies, and comprehensive backend activity logging." },
+    { question: "How to request meal during events?", answer: "Requesting meal for events requires a formal inquiry to the PSAS department, along with the reason and schedule of the event to justify the need for a free meal." },
   ];
 
   const features = [
