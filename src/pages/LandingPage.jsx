@@ -28,7 +28,7 @@ function LandingPage() {
 
   const features = [
     { icon: '⚡', title: 'Instant RFID Claiming', desc: 'Students simply tap their ID to claim meals in seconds. No more physical coupons or lengthy verification processes.' },
-    { icon: '📊', title: 'Real-Time Analytics', desc: 'Monitor meal distribution with live dashboards, track participation rates, and generate comprehensive reports instantly.' },
+    { icon: '📊', title: 'Real-Time Analytics', desc: 'Monitor meal claiming with live dashboards, track participation rates, and generate comprehensive reports instantly.' },
     { icon: '🔒', title: 'Secure & Compliant', desc: 'Built with data privacy in mind, fully compliant with RA 10173 (Data Privacy Act of 2012) to protect student information.' },
     { icon: '💰', title: 'Virtual Credit System', desc: 'Automated daily credit allocation with automatic resets. Students can use credits flexibly at meal stations or the canteen.' },
     { icon: '👥', title: 'Multi-User Management', desc: 'Role-based access for PSAS staff, food servers, canteen personnel, and administrators with tailored permissions.' },
@@ -1145,9 +1145,9 @@ function LandingPage() {
               <span>Eat's on Tap</span>
             </h1>
             <p>
-              Transform your free meal distribution with RFID technology. Eat's on
-              Tap eliminates manual coupons, reduces wait times, and provides
-              real-time analytics for La Verdad Christian College.
+              Digitalization of student's free meal claiming through an RFID-driven
+              solution. Eat's on Tap provides the PSAS Department with a
+              seamless system to better serve the scholars at LVCC Apalit.
             </p>
             <div className="cta-buttons">
               <a href="#" className="btn btn-primary">
@@ -1200,8 +1200,8 @@ function LandingPage() {
             <div className="section-badge">KEY FEATURES</div>
             <h2>Built for Efficiency</h2>
             <p>
-              Everything you need to modernize your meal distribution system and
-              enhance student welfare.
+              Optimizing student welfare through the digitalization of meal
+              claiming systems, ensuring a secure and efficient experience for every scholar.
             </p>
           </motion.div>
           <div className="features-grid">
